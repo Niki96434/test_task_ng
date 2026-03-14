@@ -1,0 +1,20 @@
+<main>
+  <header class="menu">
+    <p>Раздел: Тип 1 </p>
+    <div class="menu-analytics">
+      <p>Выбрано пунктов:</p>
+      <p>Общее значение:</p>
+    </div>
+  </header>
+  <!-- <app-home></app-home> -->
+  <div class="body-section">
+    <div class="pages-section">
+      <a href="">Тип 1</a>
+      <a href="">Тип 2</a>
+    </div>
+    <div class="pages-content">
+      <h3 class="label-position">List of items</h3>
+      <app-list *ngFor="let item of items" [item]="item" />
+    </div>
+  </div>
+</main>

@@ -1,0 +1,48 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    width: auto;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.menu-analytics {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.label-position {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.body-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.pages-section {
+    width: 15vw;
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.pages-content {
+    height: 100vh;
+    width: 85vw;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
