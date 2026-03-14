@@ -1,0 +1,17 @@
+span {
+    float: left;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+}
+
+.item-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

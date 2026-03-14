@@ -1,7 +1,8 @@
-<div class="item-content">
-    <div class="item-name">
-        <input type="checkbox">
-        <span>{{ item().name }}</span>
-    </div>
-    <span>Value: {{ item().value }}</span>
-</div>
+<h3 class="label-position">
+    <p>List of items</p>
+</h3>
+@for (item of items; track item.id) {
+<app-item [item]="item" />
+} @empty {
+<p>Элементы не найдены.</p>
+}

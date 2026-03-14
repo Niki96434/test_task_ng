@@ -1,23 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomePage } from './home/home';
-import { ItemsPage } from './list/list'
+import { HomeComponent } from './home/home.component';
+import { ItemComponent } from './item/item.component'
 import { CommonModule } from '@angular/common';
-import { ListService } from './list/list.service';
-
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { routes } from './app.routes';
+import { ListComponent } from './list/list.component';
 @Component({
   selector: 'app-root',
   imports: [
-    ItemsPage,
-    HomePage,
+    ItemComponent,
+    HomeComponent,
     CommonModule,
+    RouterLink,
+    RouterOutlet,
+    ListComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = 'homes';
 
-  items = new ListService().getListItems();
+  public pages = routes;
 
 }

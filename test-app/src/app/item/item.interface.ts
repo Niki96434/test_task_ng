@@ -1,4 +1,4 @@
-export interface listItem {
+export interface Item {
     id: number,
     name: string,
     value: number,
