@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { ItemComponent } from './item/item.component'
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { routes } from './app.routes';
 import { ListComponent } from './list/list.component';
 @Component({
@@ -21,5 +21,16 @@ import { ListComponent } from './list/list.component';
 export class App {
 
   public pages = routes;
+
+  public router = inject(Router);
+
+  getActiveTitle(): string {
+    if (this.router.url === '/items') {
+      return 'Список элементов';
+    } else if (this.router.url === '/') {
+      return 'Главная';
+    }
+    return 'Неизвестный раздел';
+  }
 
 }

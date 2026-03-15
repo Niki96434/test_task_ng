@@ -1,4 +1,6 @@
 <section class="content">
     <h1>Добро пожаловать на сайт!</h1>
-    <a href="">перейти к просмотру</a>
+    @for (page of pages; track page.path) {
+    <a [routerLink]="page.path">{{ page.title }}</a>
+    }
 </section>
