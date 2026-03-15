@@ -15,13 +15,17 @@ export class ItemComponent {
 
   static totalCount = 0;
 
-  updateCheckboxCount(checked: boolean) {
+  static totalValue = 0;
+
+  updateCheckboxCount(checked: boolean, value: number) {
     if (checked) {
       ItemComponent.totalCount++;
+      ItemComponent.totalValue += +value;
     } else if (!checked) {
       ItemComponent.totalCount--;
+      ItemComponent.totalValue -= +value;
     }
-    this.service.updateCounter(ItemComponent.totalCount)
+    this.service.updateCounter(ItemComponent.totalCount, ItemComponent.totalValue)
   }
 
 }

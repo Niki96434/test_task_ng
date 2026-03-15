@@ -6,10 +6,13 @@ import { Injectable, signal } from '@angular/core';
 export class CounterService {
 
     private counterSignal = signal(0);
-
     readonly counter = this.counterSignal.asReadonly();
 
-    updateCounter(value: number) {
-        this.counterSignal.set(value);
+    private counterValueSignal = signal(0);
+    readonly counterValue = this.counterValueSignal.asReadonly();
+
+    updateCounter(counterCheckbox: number, valueCheckbox: number) {
+        this.counterSignal.set(counterCheckbox);
+        this.counterValueSignal.set(valueCheckbox);
     }
 }

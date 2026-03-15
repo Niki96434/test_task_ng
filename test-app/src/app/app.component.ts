@@ -26,13 +26,7 @@ export class App {
 
   public router = inject(Router);
 
-  public totalCounter = 0;
-
   protected counterService = inject(CounterService);
-
-  onListCounterChange(value: number) {
-    this.totalCounter = value;
-  }
 
   getActiveTitle(): string {
     if (this.router.url === '/items') {
