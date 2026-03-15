@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Item } from "./item.interface";
 
 @Injectable()
 export class ItemsRepository {
@@ -22,7 +23,7 @@ export class ItemsRepository {
         checked: false
     }];
 
-    getListItems() {
-        return this.dataItems
+    getListItems(): Item[] {
+        return [...this.dataItems]
     }
 }

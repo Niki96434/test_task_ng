@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { ItemComponent } from './item/item.component'
-import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { routes } from './app.routes';
 import { ListComponent } from './list/list.component';
@@ -12,7 +11,6 @@ import { CounterService } from './counter.service';
   imports: [
     ItemComponent,
     HomeComponent,
-    CommonModule,
     RouterLink,
     RouterOutlet,
     ListComponent,
@@ -20,7 +18,7 @@ import { CounterService } from './counter.service';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class AppComponent {
 
   public pages = routes;
 

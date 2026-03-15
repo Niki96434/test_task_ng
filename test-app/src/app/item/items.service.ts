@@ -7,8 +7,8 @@ export class ItemsService {
 
     private repository = inject(ItemsRepository);
 
-    getListItems(): Item[] {
-        return [...this.repository.getListItems()];
+    getListItems(): readonly Item[] {
+        return this.repository.getListItems();
     }
 }
 

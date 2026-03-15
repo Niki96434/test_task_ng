@@ -1,22 +1,17 @@
-[
-    {
-        "1": {
-            "id": 1,
-            "name": "product1",
-            "value": "20",
-            "checked": false
-        },
-        "2": {
-            "id": 2,
-            "name": "product2",
-            "value": "30",
-            "checked": false
-        },
-        "3": {
-            "id": 3,
-            "name": "product3",
-            "value": "40",
-            "checked": false
-        }
+{
+    "1": {
+        "id": 1,
+        "name": "product1",
+        "value": "20"
+    },
+    "2": {
+        "id": 2,
+        "name": "product2",
+        "value": "30"
+    },
+    "3": {
+        "id": 3,
+        "name": "product3",
+        "value": "40"
     }
-]
+}

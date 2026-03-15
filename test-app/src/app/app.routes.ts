@@ -6,11 +6,15 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: 'Home',
+        title: 'Home' as const,
     },
     {
         path: 'items',
         component: ListComponent,
-        title: 'List of Items',
+        title: 'List of Items' as const,
+    },
+    {
+        path: '**',
+        redirectTo: ''
     }
 ];
