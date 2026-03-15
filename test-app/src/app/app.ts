@@ -33,4 +33,11 @@ export class App {
     return 'Неизвестный раздел';
   }
 
+  getMenu(): boolean {
+    if (this.router.url === '/items') {
+      return true
+    } else {
+      return false
+    }
+  }
 }

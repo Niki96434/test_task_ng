@@ -1,10 +1,12 @@
 <main>
   <header class="menu">
+    @if (getMenu()) {
     <p>Раздел: {{ getActiveTitle() }}</p>
     <div class="menu-analytics">
       <p>Выбрано пунктов:</p>
       <p>Общее значение:</p>
     </div>
+    } @else {}
   </header>
   <div class="body-section">
     <div class="pages-section">
