@@ -3,7 +3,7 @@
     @if (getMenu()) {
     <p>Раздел: {{ getActiveTitle() }}</p>
     <div class="menu-analytics">
-      <p>Выбрано пунктов:</p>
+      <p>Выбрано пунктов: {{ counterService.counter() }}</p>
       <p>Общее значение:</p>
     </div>
     } @else {}

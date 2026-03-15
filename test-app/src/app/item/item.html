@@ -1,6 +1,6 @@
 <div class="item-content">
     <div class="item-name">
-        <input type="checkbox">
+        <input #checkbox type="checkbox" (change)="updateCheckboxCount(checkbox.checked)">
         <span>{{ item().name }}</span>
     </div>
     <span>Value: {{ item().value }}</span>
